@@ -1,0 +1,284 @@
+@import '../colors';
+
+.carouselBody {
+    border-radius: 1rem;
+    width: 98%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    ul {
+        width: 100%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        font-family: 'Kraftan', sans-serif;
+        font-weight: 300;
+        color: $main;
+        font-weight: 500;
+        font-size: 9rem;
+
+        li:hover {
+            color: $grey2;
+            background-color: white;
+            border-radius: none;
+            height: auto;
+            cursor: none;
+        }
+
+        li {
+            @media screen and (max-width: 800px) {
+                font-size: 3.5rem;
+                border: none !important
+            }
+        }
+
+    }
+
+    .bottle {
+        img {
+            top: 25%;
+            right: 0%;
+            position: absolute;
+            z-index: 10;
+            width: 25%;
+
+            @media screen and (max-width: 800px) {
+                top: 55%;
+                right: -20%;
+                width: 40%;
+            }
+        }
+
+        .shadowed {
+            z-index: 0;
+            top: 65%;
+            right: 11%;
+
+            @media screen and (max-width: 800px) {
+                top: 71%;
+                right: 0%;
+                width: 40%;
+            }
+        }
+    }
+
+    .dish {
+        img {
+            top: 50%;
+            left: 4%;
+            position: absolute;
+            z-index: 10;
+            width: 25%;
+
+            @media screen and (max-width: 800px) {
+                top: 65%;
+                left: -30%;
+                width: 55%;
+            }
+        }
+
+        .shadowed {
+            z-index: 0;
+            opacity: .25;
+        }
+    }
+}
+
+.bookingBar {
+    z-index: 10;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px $shadow2;
+    left: 10%;
+    width: 80%;
+    height: 15vh;
+    border-radius: 0.5rem;
+    background-color: $secondary;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 20rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .line {
+        background: #937749;
+        width: 1px;
+        height: 70%;
+
+        @media screen and (max-width: 800px) {
+            width: 70%;
+            height: 1px;
+        }
+    }
+
+    .guests {
+        display: flex;
+        flex-direction: column;
+        width: 10rem;
+        justify-content: center;
+
+        input {
+            margin-bottom: 0;
+            margin-left: 0rem;
+            text-align: center;
+            width: 10rem;
+
+            @media screen and (max-width: 800px) {
+                margin-left: -0.25rem;
+            }
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .change {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -0.5rem;
+
+            .changeValue {
+                color: #937749;
+                text-align: center;
+                font-size: 1.5rem;
+                cursor: none;
+            }
+
+            .changeValue::selection {
+                display: none;
+            }
+        }
+    }
+
+    .search {
+        display: flex;
+        width: 15rem;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+
+        @media screen and (max-width: 800px) {
+            margin-left: 0rem;
+        }
+
+        input {
+            margin-bottom: 0;
+            margin-left: 0;
+            text-align: left;
+            font-size: 1.05rem;
+            width: 13rem;
+            border: 1px solid #937749;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        img {
+            @media screen and (max-width: 800px) {
+                display: none;
+            }
+        }
+    }
+
+    .input {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            width: 90%;
+        }
+    }
+
+    input {
+        color: #937749;
+        font-family: 'Mada', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 200;
+        border: none;
+        background: $secondary;
+        width: 8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+
+    input::placeholder {
+        color: #937749;
+    }
+
+    input:focus {
+        outline-width: 0;
+    }
+
+    div {
+        @media screen and (max-width: 800px) {
+            font-size: 0.5rem;
+        }
+    }
+
+    .arrowButton {
+        transition: all ease-in 500ms;
+        background-color: white;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+        width: 5rem;
+        margin-right: 2rem;
+
+        p {
+            display: none;
+        }
+
+        @media screen and (max-width: 800px) {
+            height: 3rem;
+            width: 90%;
+            margin-right: 0rem;
+        }
+    }
+
+    .arrowButton:hover {
+        transition: all ease-in 500ms;
+        background-color: #937749;
+        box-shadow: 0 0 10px $shadow;
+
+        img {
+            display: none;
+        }
+
+        p {
+            letter-spacing: 0.5px;
+            font-family: 'Kraftan', sans-serif;
+            font-weight: 300;
+            width: 50%;
+            color: white;
+            animation: ease-in 500ms;
+            transition: all ease-in 1000ms;
+            display: block;
+        }
+    }
+
+    img {
+        position: relative;
+        z-index: 30;
+        cursor: none;
+        height: 30%;
+        width: 30%;
+        box-shadow: none;
+    }
+}

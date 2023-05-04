@@ -1,0 +1,264 @@
+@import './colors';
+
+.hotelTitle {
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: 'Garamond', 'Georgia', sans-serif;
+    font-weight: 300;
+    -webkit-text-fill-color: $grey;
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.hotelContainer {
+    width: screen;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8% 0 8%;
+    justify-content: start;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        padding: 0 0% 0 0%;
+    }
+
+    .hotelCard {
+        width: 28%;
+        height: 28rem;
+        box-shadow: 0 0 15px $shadow2;
+        border-radius: 0.75rem;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        font-family: 'Mada', sans-serif;
+        overflow-y: auto;
+
+        @media screen and (max-width: 800px) {
+            width: 90%;
+            margin-left: 0rem;
+        }
+
+        h2 {
+            padding: 0.5rem;            
+            text-align: left;
+            -webkit-text-fill-color: $grey;
+            letter-spacing: 0.5px;
+            font-family: 'Garamond', 'Georgia', sans-serif;
+            font-weight: 300;
+            font-size: 1.6rem;
+            margin-top: 0.5rem;
+            margin-bottom: -.75rem;
+
+        }
+
+        .images {
+            position: relative;
+        }
+
+        .left {
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            left: 5%;
+            top: 40%;
+            cursor: pointer;
+        }
+
+        .right {
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            right: 5%;
+            top: 40%;
+            cursor: pointer;
+        }
+
+        .vip {
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            top: 0;
+            margin: 1rem;
+            left: 0;
+        }
+
+        a {
+            padding-left: 0.5rem;            
+            padding-right: 0.5rem;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            padding: .75rem;
+            text-decoration: none;
+            justify-content: space-between;
+        }
+
+        .ratingContainer {
+            padding-left: 0.5rem;            
+            padding-right: 0.5rem;
+            color: $grey2;
+            font-family: 'Maven Pro', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            .rating {
+                margin: 0.5rem 0;
+                color: $main;
+            }
+        }
+
+        .card-amenities {
+            padding: 0.5rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        .card-amenities-icons {
+            padding-left: 0.5rem;            
+            padding-right: 0.5rem;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+
+            & img {
+                width: 2rem;
+                height: 2rem;
+                margin: 0 0.5rem;
+            }
+        }
+
+        p {
+            padding-left: 0.5rem;            
+            padding-right: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: $grey2;
+            font-family: 'Maven Pro', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        img {
+            border-radius: 0.35rem 0.35rem 0 0;
+            width: 100%;
+            height: 15rem;
+            position: relative;
+            margin-bottom: -1rem;
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+        }
+
+
+    }
+
+    .hotelCard:hover {
+        box-shadow: 0 0 20px $shadow2;
+    }
+}
+
+
+
+.aboutLocation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .locationTitle {
+        font-size: 1.75rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-family: 'Garamond', 'Georgia', sans-serif;
+
+    }
+
+    .locationDescription {
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        font-family: 'Garamond', 'Georgia', sans-serif;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        color: black;
+    }
+
+    .locationMoreButton {
+        color: blue;
+        align-self: left;
+
+    }
+
+    .locationLessButton {
+        color: blue;
+        align-self: left;
+        display: none
+    }
+
+    .readMore {
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        font-family: 'Garamond', 'Georgia', sans-serif;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        color: black;
+
+    }
+
+    .locationSubHeading {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        font-family: 'Garamond', 'Georgia', sans-serif;
+        margin-top: 1rem;
+        color: black;
+    }
+
+    .placesToGo {
+        margin-top: 1rem;
+
+        b {
+            font-weight: 700;
+        }
+    }
+
+    li {
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        font-family: 'Garamond', 'Georgia', sans-serif;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        list-style-type: disc;
+        color: black;
+    }
+
+    li:hover {
+        color: black;
+        background-color: white;
+        visibility: block;
+        height: fit-content;
+        cursor: auto;
+
+    }
+}

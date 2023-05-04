@@ -1,0 +1,126 @@
+@import '../colors';
+
+.amenContent {
+    text-align: center;
+    width: 80%;
+    display: flex;
+    margin-bottom: 0rem;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7rem;
+
+    @media screen and (max-width: 800px) {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+        font-weight: 200;
+        margin-bottom: 1rem;
+        margin-top: 0rem;
+        width: 100%;
+        -webkit-text-fill-color: $grey;
+        letter-spacing: 0.5px;
+        font-family: 'Kraftan', sans-serif;
+        font-weight: 300;
+
+        @media screen and (max-width: 800px) {
+            font-size: 2rem;
+        }
+    }
+
+    div {
+        margin-top: 0.25rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: center;
+        color: $main;
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        align-items: center;
+
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .amenety {
+        padding-bottom: 2.5%;
+        box-shadow: 0 0 20px $shadow2;
+        background-color: white;
+        border: 2px solid $main;
+        border-radius: 5rem 5rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 17rem;
+        justify-content: center;
+        height: 18rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        transform-style: preserve-3d;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+            margin-right: 0rem;
+            width: 17rem;
+            border-radius: 1rem;
+            height: 5rem;
+            padding-right: 10%;
+            padding-bottom: 0%;
+            margin-bottom: 2%;
+        }
+
+        img {
+            width: 8rem;
+            background-color: white;
+            transform: translateZ(60px);
+
+            @media screen and (max-width: 800px) {
+                width: 4rem;
+            }
+        }
+
+        p {
+            letter-spacing: 0.5px;
+            font-family: 'Kraftan', sans-serif;
+            font-weight: 300;
+            font-size: 2rem;
+
+            @media screen and (max-width: 800px) {
+                writing-mode: horizontal-tb;
+                font-size: 1.75rem;
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            height: 9rem;
+            flex-direction: column;
+        }
+    }
+
+    .amenety:nth-child(odd) {
+        border-radius: 1rem 1rem 5rem 5rem;
+
+        @media screen and (max-width: 800px) {
+            padding-right: 5%;
+            height: 14rem;
+        }
+
+    }
+}
+
+p {
+    margin-top: 0rem;
+    color: $main;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}

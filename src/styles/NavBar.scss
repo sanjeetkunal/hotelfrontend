@@ -1,0 +1,241 @@
+@import 'colors';
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
+.navbar {
+    transition: all 100ms ease-in;
+    background-color: $background;
+    display: flex;
+    align-items: center;
+    width: screen;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 50;
+    padding: 1rem;
+    box-shadow: 0 0 10px $shadow;
+    top: 0;
+    @media screen and (max-width: 800px) {
+        align-items: center;
+    }
+    .profilepic {
+        transition: all 100ms ease-in-out linear; 
+        @extend .logo;
+        border-radius: 10rem;
+    }
+    .navbar-bcg{
+        display: hidden;
+    }
+}
+
+.navbar-mini{
+    @extend .navbar;
+    transition: all 500ms ease-out;
+    box-shadow: none;
+    justify-content: center;
+    background-color: transparent;
+    align-items: flex-start;
+    // height: 4rem;
+    .logo{
+        // display: none;
+        visibility: hidden;
+    }
+    .profilepic{
+        // display: none;   
+        visibility: hidden;
+    }
+    .TourPackage{
+        // display: none;
+        visibility: hidden;
+    }
+    .navMobile{
+        visibility: hidden;
+        // display: none;
+    }
+    .navMobile-box{
+        // display:none;
+        visibility: hidden;
+    }
+}
+
+
+.logo {
+    transition: all 500ms ease-in-out linear;
+    height: 4rem;
+    cursor: pointer;
+    @media screen and (max-width: 800px) {
+        height: 3rem;
+    }
+}
+.Book {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 1px solid $main;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition-duration: 0.5s;
+    font-size: 20px;
+    margin-right: 1rem;
+    color: black;
+    @media screen and (max-width: 800px) {
+        // display: none;
+        display: hidden
+    }
+}
+
+.Book:hover {
+    color: white;
+    background: $gradient;
+}
+
+.item::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.item:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.item::before {
+    content: ' ';
+    position: absolute;
+    inset: 0 0 0 0;
+    background: $main;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    border-radius: 0.25rem;
+}
+.item {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: $grey;
+    padding: 0.5rem;
+}
+.item:hover {
+    color: rgb(248, 227, 227);
+}
+
+.TourPackage {
+    transition: all 500ms ease-in-out linear;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    color: $grey;
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+    @media screen and (max-width: 800px) {
+        display:none;
+        justify-content: flex-end;
+        padding-right: 1rem;
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition-duration: 0.5s;
+    a{
+        height: 100%;
+        width: 100%;
+    }
+    @media screen and (max-width: 800px) {
+        border: 1px solid $main;
+        border-radius: 0.5rem;
+    }
+}
+
+li:hover {
+    border-radius: 0.5rem;
+    color: white;
+    height: 1rem;
+    background-color: $main;
+    cursor: pointer;
+}
+
+.hotels-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease;
+    margin-top: 0.5rem;
+    opacity: 1;
+    z-index: 2;
+    @media screen and (max-width: 800px) {
+        left: -1.5rem;
+    }
+
+    & li {
+        clear: both;
+        font-family: 'Maven Pro', sans-serif;
+        font-size: 1rem;
+        @media screen and (max-width: 800px) {
+            border: none;
+            border-radius: 0rem;
+        }
+    }
+}
+
+.hotels {
+    width: 10rem;
+    height: fit-content;
+    color: black;
+    margin-top:-0.5rem ;
+    background-color: bisque;
+    font-size: 0.75rem;
+    @media screen and (max-width: 800px) {
+        width: 6.25rem;
+        height: fit-content;
+    }
+}
+
+.hotels:hover {
+    border-radius: 0rem;
+    background: $gradient;
+    height: fit-content;
+    @media screen and (max-width: 800px) {
+        height: fit-content;
+    }
+}
+
+.navMobile-box{
+    @extend .navMobile;
+    padding: 1rem;
+    position: absolute;
+    border: 1px solid $main;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width: 91.5%;
+    background-color: white !important;
+    top: 5rem;
+    left:0;
+    display: hidden;
+    @media screen and (max-width: 800px) {
+        display: flex;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+@media print {
+    .noprint {
+        display: none;
+    }
+}   

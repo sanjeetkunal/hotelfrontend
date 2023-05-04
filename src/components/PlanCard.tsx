@@ -7,7 +7,7 @@ import { v4 as uuid } from 'uuid';
 import '../styles/PlanCard.scss'
 import React from "react";
 
-function PlanCard(this: any, { plan, room, amenities, maxCap, guests, checkIn, checkOut }: any) {
+function PlanCard(this: any, { plan, room, amenities, maxCap, guests, checkIn, checkOut,key }: any) {
   const dispatch = useAppDispatch();
   const wind = window.matchMedia("(max-width: 800px)");
   const Plans = useAppSelector((state) => state.plans.selectedPlans);
@@ -36,10 +36,15 @@ function PlanCard(this: any, { plan, room, amenities, maxCap, guests, checkIn, c
   
   useEffect(()=>{
     let newPlan = { ...plan, roomType: room, maxCap: maxCap, guests: guests };
-    count = count + 1;
-    setCount(count);
-    dispatch(addPlan(newPlan));
-    console.log("lowest price",plan?.price);
+    //count = count + 1;
+    //setCount(count);
+    //dispatch(addPlan(newPlan));
+    console.log("key",key);
+    if(plan.title =="EP Plan"){
+      count = count + 1;
+      setCount(count);
+      dispatch(addPlan(newPlan));
+    }
   },[])
   
   const unique_id = uuid();
@@ -67,6 +72,7 @@ function PlanCard(this: any, { plan, room, amenities, maxCap, guests, checkIn, c
    
 
   const incrementCount = () => {
+    console.log("increment counter runs")
     let newPlan = { ...plan, roomType: room, maxCap: maxCap, guests: guests };
     console.log("roomType", room, "maxCap", maxCap, "guests", guests);
     count = count + 1;

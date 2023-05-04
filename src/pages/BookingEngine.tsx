@@ -1261,6 +1261,7 @@ function App() {
               checkOut={checkOut}
               setCheckIn={setCheckIn}
               setCheckOut={setCheckOut}
+              
             />
             {isMobile && !inView && isMobVisible && (
               <MobileBookingCard scrollToCard={scrollToCard} />

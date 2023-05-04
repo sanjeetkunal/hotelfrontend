@@ -50,8 +50,10 @@ function RoomCard({ room,checkIn,checkOut }: any) {
                     </div>
                     <img src={room.image.asset.url + (isMobile ? '?w=200&h=175': '')} className="roomImage" alt={room.type}/>
                 </div>
-                {room?.plans.map((plan: any, i: number) => (
-                    <PlanCard
+                {room?.plans.map((plan: any, i: number) => {
+                    //console.log("key ",i)
+                    return (
+                        <PlanCard
                         maxCap={room.totalRooms}
                         room={room.type}
                         plan={plan}
@@ -61,7 +63,9 @@ function RoomCard({ room,checkIn,checkOut }: any) {
                         checkIn ={checkIn}
                         checkOut ={checkOut}
                     />
-                ))}
+                    )
+        
+                    })}
             </div>
         </>
     )
